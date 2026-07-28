@@ -25,7 +25,7 @@ heading_anchors: true
 # The table of contents at the top of each chapter stops at top-level sections (##).
 # Without this it would also pull in every ### subsection and run very long.
 kramdown:
-  toc_levels: 2
+  toc_levels: "1..2"
 
 aux_links:
   "Download the PDF (EN)":
