@@ -15,6 +15,14 @@ plugins:
   - jekyll-seo-tag
   - jekyll-include-cache
 
+# Jekyll never reads a theme's own _config.yml, so without this every page is
+# emitted as a bare HTML fragment: no <head>, no stylesheet, no sidebar.
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
 search_enabled: true
 search:
   heading_level: 2
