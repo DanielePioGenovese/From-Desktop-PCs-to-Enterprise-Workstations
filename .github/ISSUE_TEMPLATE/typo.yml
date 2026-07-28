@@ -1,0 +1,61 @@
+name: "Typo or formatting error"
+description: "Spelling, grammar, punctuation, formatting, a misaligned table or a broken link."
+title: "[Typo] "
+labels: ["typo"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Even small typos are welcome: across 130,000 words a few
+        always slip through.
+
+        If instead you found a **wrong technical fact** (a specification, a price, a
+        compatibility claim), use the *Technical error* template: that one needs a
+        different kind of verification.
+
+        Reports in English or Italian are both fine.
+
+  - type: dropdown
+    id: edition
+    attributes:
+      label: Edition
+      options:
+        - English
+        - Italian
+        - Both
+    validations:
+      required: true
+
+  - type: dropdown
+    id: format
+    attributes:
+      label: Where you read it
+      options:
+        - PDF
+        - Website / Markdown on GitHub
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Chapter and location
+      description: "Chapter and section. If you are reading the PDF, the page number is fine."
+      placeholder: "Ch. 5, section 3.2 — or: PDF p. 147"
+    validations:
+      required: true
+
+  - type: textarea
+    id: current
+    attributes:
+      label: Current text
+      description: "Paste the exact sentence as written. A few words are enough to find it."
+    validations:
+      required: true
+
+  - type: textarea
+    id: correction
+    attributes:
+      label: What it should say
+    validations:
+      required: true

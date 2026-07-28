@@ -1,0 +1,47 @@
+title: Hardware for Artificial Intelligence
+description: "From Desktop PCs to Enterprise Workstations — a free book by Daniele Genovese, in English and Italian."
+author: Daniele Genovese
+lang: en
+
+url: "https://danielepiogenovese.github.io"
+baseurl: "/From-Desktop-PCs-to-Enterprise-Workstations"
+
+# just-the-docs: sidebar with every chapter, plus full-text search.
+# It is a remote_theme, so GitHub Pages downloads and builds it server-side:
+# no Ruby or Jekyll installation is needed locally.
+remote_theme: just-the-docs/just-the-docs
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+
+search_enabled: true
+search:
+  heading_level: 2
+  previews: 3
+
+heading_anchors: true
+
+# The table of contents at the top of each chapter stops at top-level sections (##).
+# Without this it would also pull in every ### subsection and run very long.
+kramdown:
+  toc_levels: 2
+
+aux_links:
+  "Download the PDF (EN)":
+    - "/pdf/Hardware-for-Artificial-Intelligence-EN-v1.0.pdf"
+  "Scarica il PDF (IT)":
+    - "/pdf/Hardware-per-l-Intelligenza-Artificiale-IT-v1.0.pdf"
+  "GitHub":
+    - "https://github.com/DanielePioGenovese/From-Desktop-PCs-to-Enterprise-Workstations"
+aux_links_new_tab: false
+
+back_to_top: true
+back_to_top_text: "Back to top"
+
+footer_content: 'Hardware for Artificial Intelligence — Daniele Genovese. Released under the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a> license.'
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

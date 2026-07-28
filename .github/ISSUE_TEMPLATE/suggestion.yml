@@ -1,0 +1,55 @@
+name: "Suggestion"
+description: "An unclear explanation, a missing topic, a proposed improvement."
+title: "[Suggestion] "
+labels: ["suggestion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This matters too: if an explanation is not clear, the problem is with the
+        explanation, not with the reader.
+
+        Also fine for questions about the content — a doubt about a build, a component
+        choice. Issues stay public, so the answer is useful to whoever comes next.
+
+        Reports in English or Italian are both fine.
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What this is about
+      options:
+        - An explanation is not clear
+        - A topic is missing that I think belongs here
+        - A question about the content
+        - Proposed improvement (structure, tables, examples)
+        - Something else
+    validations:
+      required: true
+
+  - type: dropdown
+    id: edition
+    attributes:
+      label: Edition
+      options:
+        - English
+        - Italian
+        - Both
+        - Not applicable
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Chapter and location
+      description: "If it concerns a specific passage. Leave empty for a general point."
+      placeholder: "Ch. 4, section 2.3"
+
+  - type: textarea
+    id: detail
+    attributes:
+      label: The suggestion
+      description: "If something is unclear, tell me what you expected to find: that helps more than you would think."
+    validations:
+      required: true

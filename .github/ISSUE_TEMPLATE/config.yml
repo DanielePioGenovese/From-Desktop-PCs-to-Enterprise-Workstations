@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: "Errata — check here first"
+    url: "https://danielepiogenovese.github.io/From-Desktop-PCs-to-Enterprise-Workstations/ERRATA.html"
+    about: "Known errors and upcoming corrections. Worth a look before reporting."
+  - name: "How to report a mistake"
+    url: "https://danielepiogenovese.github.io/From-Desktop-PCs-to-Enterprise-Workstations/CONTRIBUTING.html"
+    about: "What makes a report useful, and why no pull request is needed."

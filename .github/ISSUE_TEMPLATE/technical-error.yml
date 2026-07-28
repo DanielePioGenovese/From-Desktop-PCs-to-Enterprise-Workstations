@@ -1,0 +1,70 @@
+name: "Technical error"
+description: "Wrong data: a specification, a price, a compatibility claim, a technically incorrect statement."
+title: "[Technical error] "
+labels: ["technical-error"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is the most valuable kind of report. Two quick checks before you open it:
+
+        - **Check the [errata](../blob/main/ERRATA.md)**: it may already be known.
+        - **Prices and product generations refer to July 2026**, including that year's DDR5
+          pricing anomaly. A price list having changed since is not an error in the book.
+          If the figure was wrong *already then*, that is a real error — please report it.
+
+        Reports in English or Italian are both fine.
+
+  - type: dropdown
+    id: edition
+    attributes:
+      label: Edition
+      options:
+        - English
+        - Italian
+        - Both
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Chapter and location
+      description: "Chapter and section. If you are reading the PDF, the page number is fine."
+      placeholder: "Ch. 10, section 4.1 — or: PDF p. 262"
+    validations:
+      required: true
+
+  - type: textarea
+    id: claim
+    attributes:
+      label: What the book says
+      description: "Paste the exact sentence or table row."
+    validations:
+      required: true
+
+  - type: textarea
+    id: correction
+    attributes:
+      label: Why it is wrong, and what it should say
+    validations:
+      required: true
+
+  - type: textarea
+    id: source
+    attributes:
+      label: Source
+      description: >
+        A source makes the difference: the manufacturer's specification page, official
+        documentation, a review from a serious outlet. Not because I doubt you, but because
+        prices and specifications move fast and I need to verify before correcting.
+        If you do not have one, open the report anyway — I will verify it myself.
+      placeholder: "https://www.amd.com/en/products/..."
+
+  - type: checkboxes
+    id: credit
+    attributes:
+      label: Credit
+      options:
+        - label: "I would rather NOT be credited in the errata"
+          required: false
