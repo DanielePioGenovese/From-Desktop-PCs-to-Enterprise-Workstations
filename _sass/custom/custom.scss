@@ -6,8 +6,12 @@
 // header. The theme sizes that header to a fixed height and pins the title to
 // 100% of it, so the top of the first line was being clipped. Let both grow to
 // fit their content instead.
+// On wide screens the theme also pins height AND max-height to 3.75rem, so
+// overriding min-height alone leaves the clipping in place.
 .site-header {
   min-height: auto;
+  height: auto;
+  max-height: none;
 }
 
 .site-title {
