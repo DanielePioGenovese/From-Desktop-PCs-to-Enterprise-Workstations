@@ -28,8 +28,13 @@ jobs:
           ruby-version: "3.3"
           bundler-cache: true
 
+      # enablement: turns Pages on (build type "workflow") if it is off, so the
+      # site does not silently 404 after a settings reset — switching the repo
+      # between private and public disables Pages.
       - name: Configure Pages
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - name: Build with Jekyll
         run: bundle exec jekyll build --trace
