@@ -7,12 +7,13 @@ url: "https://danielepiogenovese.github.io"
 baseurl: "/From-Desktop-PCs-to-Enterprise-Workstations"
 
 # just-the-docs: sidebar with every chapter, plus full-text search.
-# It is a remote_theme, so GitHub Pages downloads and builds it server-side:
-# no Ruby or Jekyll installation is needed locally.
-remote_theme: just-the-docs/just-the-docs
+# Installed as a gem via the Gemfile and built by .github/workflows/pages.yml.
+# jekyll-include-cache is required by the theme ({% include_cached %}); without
+# it the build dies with "Unknown tag 'include_cached'".
+theme: just-the-docs
 plugins:
-  - jekyll-remote-theme
   - jekyll-seo-tag
+  - jekyll-include-cache
 
 search_enabled: true
 search:
