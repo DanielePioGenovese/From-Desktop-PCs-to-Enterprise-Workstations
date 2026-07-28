@@ -35,14 +35,14 @@ heading_anchors: true
 kramdown:
   toc_levels: "1..2"
 
-# aux_links are emitted verbatim: _config.yml is not run through Liquid, so
-# baseurl is never prepended. A bare "/pdf/..." resolves to the domain root and
-# 404s — the repo path has to be spelled out in full.
+# Header links, shown on wide screens next to the search box. Deliberately just
+# GitHub: the PDFs are already offered on the home page and on each edition's
+# index, so repeating them up here was clutter.
+#
+# Note if you ever add one back: aux_links values are emitted verbatim, because
+# _config.yml is not run through Liquid. A bare "/pdf/..." would resolve to the
+# domain root and 404 — the full repo path has to be spelled out.
 aux_links:
-  "Download the PDF (EN)":
-    - "/From-Desktop-PCs-to-Enterprise-Workstations/pdf/Hardware-for-Artificial-Intelligence-EN-v1.0.pdf"
-  "Scarica il PDF (IT)":
-    - "/From-Desktop-PCs-to-Enterprise-Workstations/pdf/Hardware-per-l-Intelligenza-Artificiale-IT-v1.0.pdf"
   "GitHub":
     - "https://github.com/DanielePioGenovese/From-Desktop-PCs-to-Enterprise-Workstations"
 aux_links_new_tab: false
