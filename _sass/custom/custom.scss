@@ -1,0 +1,21 @@
+// just-the-docs imports this file last, so anything here overrides the theme.
+// Jekyll resolves _sass from the site before the theme, so this replaces the
+// empty custom.scss that ships with just-the-docs.
+
+// "Hardware for Artificial Intelligence" wraps onto two lines in the sidebar
+// header. The theme sizes that header to a fixed height and pins the title to
+// 100% of it, so the top of the first line was being clipped. Let both grow to
+// fit their content instead.
+.site-header {
+  min-height: auto;
+}
+
+.site-title {
+  height: auto;
+  min-height: 0;
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
+  line-height: 1.3;
+  white-space: normal;
+  overflow: visible;
+}
